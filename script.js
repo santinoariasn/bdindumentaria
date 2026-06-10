@@ -20,13 +20,13 @@ const productos = {
         nombre: "Sueter Negro Trenzado BD",
         precio: 25000,
         descripcion: "Sueter cómodo y elegante. Disponible en todos los talles.",
-        fotos: ["img/sueter/sueter1.jpg", "img/sueter/sueter2.jpg"]
+        fotos: ["img/sueter/sueter1.jpg", "img/sueter/sueter2.jpg", "img/sueter/sueter3.jpg"]
     },
     chenil: {
         nombre: "Sueter Azul Trenzado BD",
         precio: 24000,
         descripcion: "Sueter de chenil, abrigado y moderno. Disponible en todos los talles.",
-        fotos: ["img/chenil/chenil1.jpg"]
+        fotos: ["img/chenil/chenil1.jpg", "img/chenil/chenil2.jpg", "img/chenil/chenil3.jpg"]
     }
 }
 
