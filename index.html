@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BD Indumentaria</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+        <button class="hamburguesa">&#9776;</button>
+        <div class="nav-logo">BD Indumentaria</div>
+        <div class="nav-derecha">
+            <a href="#catalogo">Catálogo</a>
+            <a href="#contacto">Contacto</a>
+            <button class="carrito-btn" onclick="abrirCarrito()">
+            🛒 <span id="carrito-count">0</span>
+            </button>
+        </div>
+        </nav>
+        <section class="hero">
+        <div class="hero-img">
+        <img src="img/hero/foto1.png" alt="Foto 1">
+        </div>
+        <div class="hero-texto">
+            <p class="subtitulo">Colección 2026</p>
+            <h2>Prendas que<br>te definen</h2>
+            <a href="#catalogo" class="boton-hero">Ver Catálogo</a>
+        </div>
+        <div class="hero-img">
+            <img src="img/hero/foto2.png" alt="Foto 2">
+        </div>
+        </section>
+            <section id="catalogo" class="catalogo">
+                <h2>Catálogo</h2>
+                <div class="grilla">
+                <div class="producto" onclick="abrirProducto('saco')">
+                <img src="img/saco/saco1.jpg" alt="Saco">
+                <h3>Saco BD</h3>
+                <p>$21.000</p>
+                </div>
+                <div class="producto" onclick="abrirProducto('sueter')">
+                <img src="img/sueter/sueter1.jpg" alt="Sueter">
+                <h3>Sueter Negro Trenzado BD</h3>
+                <p>$25.000</p>
+                </div>
+                <div class="producto" onclick="abrirProducto('chenil')">
+                <img src="img/chenil/chenil1.jpg" alt="Chenil">
+                <h3>Sueter Azul Trenzado BD</h3>
+                <p>$24.000</p>
+                </div>
+                </div>
+        </section>
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <p>¿Querés hacer un pedido o consulta? ¡Escribinos!</p>
+            <div class="contacto-links">
+            <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-contacto whatsapp">WhatsApp</a>
+            <a href="https://www.instagram.com/bdindumentaria1/" target="_blank" class="btn-contacto instagram">Instagram</a>
+            </div>
+        </section>
+        <footer>
+            <p>© 2026 BD Indumentaria. Todos los derechos reservados.</p>
+        </footer>
+        
+        <div id="modal-producto" class="modal">
+            <div class="modal-contenido">
+                <button class="cerrar-modal">&#10005;</button>
+                    <div class="modal-fotos">
+                        <img id="foto-principal" src="" alt="Foto principal">
+                        <div class="miniaturas"></div>
+                    </div>
+            <div class="modal-info">
+            <h2></h2>
+            <p class="modal-precio"></p>
+            <p class="modal-descripcion"></p>
+            <button class="btn-agregar-carrito btn-contacto" style="background-color:#b5424a">Agregar al carrito</button>
+            <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-contacto whatsapp">Consultar por WhatsApp</a>
+            </div>
+        </div>
+        </div>
+
+        <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+        <button class="cerrar-carrito">&#10005;</button>
+        <h2>Tu carrito</h2>
+        <div id="carrito-items"></div>
+        <div id="carrito-total" class="carrito-total"></div>
+        <button id="btn-whatsapp-carrito" class="btn-contacto whatsapp">
+            Consultar por WhatsApp
+        </button>
+        </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

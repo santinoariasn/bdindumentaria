@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #fdf6f6;
+    color: #3a3a3a;
+    padding-top: 70px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: padding 0.3s;
+    z-index: 1000;
+}
+
+nav.chico {
+    padding: 10px 40px;
+}
+
+.hamburguesa {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #3a3a3a;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: #b5424a;
+    letter-spacing: 2px;
+}
+
+.nav-derecha {
+    display: flex;
+    gap: 24px;
+    margin-left: auto;
+}
+
+.nav-derecha a {
+    text-decoration: none;
+    color: #3a3a3a;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.nav-derecha a:hover {
+    color: #b5424a;
+}
+
+.hero {
+    display: flex;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-img {
+    flex: 1;
+    overflow: hidden;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-texto {
+    flex: 1;
+    background: linear-gradient(135deg, #2c1a1d, #6b2d35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
+.boton-hero {
+    text-decoration: none;
+    border: 2px solid white;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.boton-hero:hover {
+    background-color: white;
+    color: #6b2d35;
+}
+
+.hero-texto .subtitulo {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #aaaaaa;
+}
+
+.hero-texto h2 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    line-height: 1.2;
+}
+.catalogo {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.catalogo h2 {
+    font-size: 32px;
+    color: #b5424a;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.producto img {
+    width: 100%;
+}
+
+.producto h3 {
+    padding: 12px 16px 4px;
+    font-size: 16px;
+    color: #3a3a3a;
+}
+
+.producto p {
+    padding: 0 16px 16px;
+    color: #b5424a;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.contacto {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #fce8e8;
+}
+
+.contacto h2 {
+    font-size: 32px;
+    color: #b5424a;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.contacto p {
+    color: #7a7a7a;
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.contacto-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-contacto {
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.instagram {
+    background-color: #c13584;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: white;
+    color: #7a7a7a;
+    font-size: 14px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: white;
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 800px;
+    width: 90%;
+    display: flex;
+    gap: 32px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #3a3a3a;
+}
+
+.modal-fotos {
+    flex: 1;
+}
+
+#foto-principal {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.miniaturas img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.miniaturas img:hover {
+    border-color: #b5424a;
+}
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-info h2 {
+    font-size: 28px;
+    color: #3a3a3a;
+}
+
+.modal-precio {
+    font-size: 22px;
+    color: #b5424a;
+    font-weight: bold;
+}
+
+.modal-descripcion {
+    color: #7a7a7a;
+    line-height: 1.6;
+}
+
+.producto {
+    cursor: pointer;
+}
+
+.producto img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.carrito-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #3a3a3a;
+    position: relative;
+}
+
+#carrito-count {
+    background-color: #b5424a;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.carrito-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b5424a;
+    margin: 16px 0;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0e0e0;
+    font-size: 15px;
+}
+
+.carrito-item button {
+    background: none;
+    border: none;
+    color: #b5424a;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#modal-carrito .modal-contenido {
+    flex-direction: column;
+    max-width: 500px;
+}
+
+#modal-carrito h2 {
+    color: #b5424a;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
