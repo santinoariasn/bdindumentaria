@@ -11,13 +11,35 @@
         <button class="hamburguesa">&#9776;</button>
         <div class="nav-logo">BD Indumentaria</div>
         <div class="nav-derecha">
-            <a href="#catalogo">Catálogo</a>
-            <a href="#contacto">Contacto</a>
-            <button class="carrito-btn" onclick="abrirCarrito()">
-            🛒 <span id="carrito-count">0</span>
-            </button>
+        <button class="carrito-btn" onclick="abrirCarrito()">
+        🛒 <span id="carrito-count">0</span>
+        </button>
         </div>
         </nav>
+        <div id="menu-lateral" class="menu-lateral">
+        <button class="cerrar-menu">&#10005;</button>
+        <ul class="menu-items">
+        <li><a href="#">Inicio</a></li>
+        <li class="menu-con-submenu">
+        <span>Productos ›</span>
+        <ul class="submenu">
+            <li><a href="#catalogo">Sacos</a></li>
+            <li><a href="#catalogo">Pantalones</a></li>
+            <li><a href="#catalogo">Remeras</a></li>
+            <li><a href="#catalogo">Buzos</a></li>
+        </ul>
+        </li>
+        <li class="menu-con-submenu-accesorios">
+        <span>Accesorios ›</span>
+        <ul class="submenu-accesorios">
+            <li><a href="#catalogo">Bufandas</a></li>
+            <li><a href="#catalogo">Boinas</a></li>
+        </ul>
+        </li>
+        <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        </div>
+        <div id="overlay-menu" class="overlay-menu"></div>
         <section class="hero">
         <div class="hero-img">
         <img src="img/hero/foto1.png" alt="Foto 1">

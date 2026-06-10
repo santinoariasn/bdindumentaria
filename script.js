@@ -155,3 +155,32 @@ document.getElementById("btn-whatsapp-carrito").addEventListener("click", functi
     mensaje += `Total: $${total.toLocaleString()}`
     window.open("https://wa.me/549XXXXXXXXXX?text=" + mensaje, "_blank")
 })
+
+// MENU LATERAL
+const menuLateral = document.getElementById("menu-lateral")
+const overlayMenu = document.getElementById("overlay-menu")
+const cerrarMenu = document.querySelector(".cerrar-menu")
+const hamburguesaBtn = document.querySelector(".hamburguesa")
+
+hamburguesaBtn.addEventListener("click", function() {
+    menuLateral.classList.add("abierto")
+    overlayMenu.classList.add("activo")
+})
+
+cerrarMenu.addEventListener("click", function() {
+    menuLateral.classList.remove("abierto")
+    overlayMenu.classList.remove("activo")
+})
+
+overlayMenu.addEventListener("click", function() {
+    menuLateral.classList.remove("abierto")
+    overlayMenu.classList.remove("activo")
+})
+
+// SUBMENU PRODUCTOS
+const menuConSubmenu = document.querySelector(".menu-con-submenu span")
+const submenu = document.querySelector(".submenu")
+
+menuConSubmenu.addEventListener("click", function() {
+    submenu.classList.toggle("abierto")
+})
