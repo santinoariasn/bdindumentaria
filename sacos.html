@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sacos - BD Indumentaria</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <button class="hamburguesa">&#9776;</button>
+            <div class="nav-logo">BD Indumentaria</div>
+            <div class="nav-derecha">
+                <button class="carrito-btn" onclick="abrirCarrito()">
+                    🛒 <span id="carrito-count">0</span>
+                </button>
+            </div>
+        </nav>
+        <div id="menu-lateral" class="menu-lateral">
+            <button class="cerrar-menu">&#10005;</button>
+            <ul class="menu-items">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-con-submenu">
+                    <span>Productos ›</span>
+                    <ul class="submenu">
+                        <li><a href="sacos.html">Sacos</a></li>
+                        <li><a href="pantalones.html">Pantalones</a></li>
+                        <li><a href="remeras.html">Remeras</a></li>
+                        <li><a href="buzos.html">Buzos</a></li>
+                    </ul>
+                </li>
+                <li class="menu-con-submenu-accesorios">
+                    <span>Accesorios ›</span>
+                    <ul class="submenu-accesorios">
+                        <li><a href="bufandas.html">Bufandas</a></li>
+                        <li><a href="boinas.html">Boinas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div id="overlay-menu" class="overlay-menu"></div>
+
+        <section class="pagina-categoria">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / 
+                <a href="#">Productos</a> / 
+                <span>Sacos</span>
+            </div>
+            <h1>Sacos</h1>
+            <div class="grilla">
+                <div class="producto" onclick="abrirProducto('saco')">
+                    <img src="img/saco/saco1.jpg" alt="Saco">
+                    <h3>Saco BD</h3>
+                    <p>$21.000</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <p>¿Querés hacer un pedido o consulta? ¡Escribinos!</p>
+            <div class="contacto-links">
+                <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-contacto whatsapp">WhatsApp</a>
+                <a href="https://www.instagram.com/bdindumentaria1/" target="_blank" class="btn-contacto instagram">Instagram</a>
+            </div>
+        </section>
+        <footer>
+            <p>© 2026 BD Indumentaria. Todos los derechos reservados.</p>
+        </footer>
+
+        <div id="modal-producto" class="modal">
+            <div class="modal-contenido">
+                <button class="cerrar-modal">&#10005;</button>
+                <div class="modal-fotos">
+                    <img id="foto-principal" src="" alt="Foto principal">
+                    <div class="miniaturas"></div>
+                </div>
+                <div class="modal-info">
+                    <div class="modal-talles"></div>
+                    <h2></h2>
+                    <p class="modal-precio"></p>
+                    <p class="modal-descripcion"></p>
+                    <button class="btn-agregar-carrito btn-contacto" style="background-color:#b5424a">Agregar al carrito</button>
+                    <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-contacto whatsapp">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-carrito" class="modal">
+            <div class="modal-contenido">
+                <button class="cerrar-carrito">&#10005;</button>
+                <h2>Tu carrito</h2>
+                <div id="carrito-items"></div>
+                <div id="carrito-total" class="carrito-total"></div>
+                <button id="btn-whatsapp-carrito" class="btn-contacto whatsapp">
+                    Consultar por WhatsApp
+                </button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

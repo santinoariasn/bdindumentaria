@@ -23,10 +23,10 @@
         <li class="menu-con-submenu">
         <span>Productos ›</span>
         <ul class="submenu">
-            <li><a href="#catalogo">Sacos</a></li>
-            <li><a href="#catalogo">Pantalones</a></li>
-            <li><a href="#catalogo">Remeras</a></li>
-            <li><a href="#catalogo">Buzos</a></li>
+        <li><a href="sacos.html">Sacos</a></li>
+        <li><a href="pantalones.html">Pantalones</a></li>
+        <li><a href="remeras.html">Remeras</a></li>
+        <li><a href="buzos.html">Buzos</a></li>
         </ul>
         </li>
         <li class="menu-con-submenu-accesorios">
@@ -53,8 +53,18 @@
             <img src="img/hero/foto2.png" alt="Foto 2">
         </div>
         </section>
-            <section id="catalogo" class="catalogo">
-                <h2>Catálogo</h2>
+        <section class="featured">
+        <div class="featured-item" onclick="abrirProducto('saco')">
+        <img src="img/feature/feature1.jpg" alt="Featured 1">
+        <button class="btn-featured">CLICK HERE</button>
+        </div>
+        <div class="featured-item" onclick="abrirProducto('sueter')">
+        <img src="img/feature/feature2.jpg" alt="Featured 2">
+        <button class="btn-featured">CLICK HERE</button>
+        </div>
+        </section>
+            <section id="novedades" class="catalogo">
+                <h2>Novedades</h2>
                 <div class="grilla">
                 <div class="producto" onclick="abrirProducto('saco')">
                 <img src="img/saco/saco1.jpg" alt="Saco">
@@ -96,6 +106,7 @@
             <h2></h2>
             <p class="modal-precio"></p>
             <p class="modal-descripcion"></p>
+            <div class="modal-talles"></div>
             <button class="btn-agregar-carrito btn-contacto" style="background-color:#b5424a">Agregar al carrito</button>
             <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-contacto whatsapp">Consultar por WhatsApp</a>
             </div>

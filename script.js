@@ -8,27 +8,30 @@ window.addEventListener("scroll", function() {
     }
 })
 
-// PRODUCTOS
 const productos = {
     saco: {
         nombre: "Saco BD",
         precio: 21000,
-        descripcion: "Saco de alta calidad, ideal para cualquier ocasión. Disponible en todos los talles.",
+        descripcion: "Saco de alta calidad, ideal para cualquier ocasión.",
+        talles: ["S", "M", "L", "XL"],
         fotos: ["img/saco/saco1.jpg", "img/saco/saco2.jpg", "img/saco/saco3.jpg", "img/saco/saco4.jpg"]
     },
     sueter: {
         nombre: "Sueter Negro Trenzado BD",
         precio: 25000,
-        descripcion: "Sueter cómodo y elegante. Disponible en todos los talles.",
-        fotos: ["img/sueter/sueter1.jpg", "img/sueter/sueter2.jpg", "img/sueter/sueter3.jpg"]
+        descripcion: "Sueter cómodo y elegante.",
+        talles: ["S", "M", "L"],
+        fotos: ["img/sueter/sueter1.jpg", "img/sueter/sueter2.jpg"]
     },
     chenil: {
         nombre: "Sueter Azul Trenzado BD",
         precio: 24000,
-        descripcion: "Sueter de chenil, abrigado y moderno. Disponible en todos los talles.",
-        fotos: ["img/chenil/chenil1.jpg", "img/chenil/chenil2.jpg", "img/chenil/chenil3.jpg"]
+        descripcion: "Sueter de chenil, abrigado y moderno.",
+        talles: ["M", "L", "XL"],
+        fotos: ["img/chenil/chenil1.jpg"]
     }
 }
+
 
 // CARRITO
 let carrito = []
@@ -55,6 +58,19 @@ function abrirProducto(id) {
         img.src = foto
         img.onclick = function() { cambiarFoto(img) }
         miniaturas.appendChild(img)
+    })
+
+    const tallesDiv = document.querySelector(".modal-talles")
+    tallesDiv.innerHTML = "<p>Talle:</p>"
+    p.talles.forEach(function(talle) {
+    const btn = document.createElement("button")
+    btn.textContent = talle
+    btn.classList.add("btn-talle")
+    btn.addEventListener("click", function() {
+        document.querySelectorAll(".btn-talle").forEach(b => b.classList.remove("seleccionado"))
+        btn.classList.add("seleccionado")
+    })
+    tallesDiv.appendChild(btn)
     })
 
     // Botón agregar al carrito
@@ -184,3 +200,11 @@ const submenu = document.querySelector(".submenu")
 menuConSubmenu.addEventListener("click", function() {
     submenu.classList.toggle("abierto")
 })
+
+const menuAccesorios = document.querySelector(".menu-con-submenu-accesorios span")
+const submenuAccesorios = document.querySelector(".submenu-accesorios")
+
+menuAccesorios.addEventListener("click", function() {
+    submenuAccesorios.classList.toggle("abierto")
+})
+

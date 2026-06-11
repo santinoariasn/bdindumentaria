@@ -373,20 +373,22 @@ footer {
 @media (max-width: 768px) {
 
     nav {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
         padding: 12px 16px;
     }
 
     .nav-logo {
         position: static;
         transform: none;
-        width: 100%;
         text-align: center;
-        margin-bottom: 8px;
+        font-size: 18px;
     }
 
     .nav-derecha {
-        margin: 0 auto;
+        margin: 0;
+        justify-content: flex-end;
     }
 
     .hero {
@@ -394,12 +396,17 @@ footer {
         height: auto;
     }
 
+    .hero-img:last-child {
+        display: none;
+    }
+
     .hero-img {
-        height: 300px;
+        height: 500px;
     }
 
     .hero-texto {
         padding: 40px 20px;
+        height: auto;
     }
 
     .hero-texto h2 {
@@ -414,16 +421,13 @@ footer {
         flex-direction: column;
     }
 
-    .hero-img:last-child {
-        display: none;
-    }
-
-    .hero-img {
-        height: 500px;
-    }
-
-    .hero-texto {
+    .featured {
+        grid-template-columns: 1fr;
         height: auto;
+    }
+
+    .featured-item {
+        height: 400px;
     }
 }
 
@@ -533,4 +537,119 @@ footer {
 
 .menu-con-submenu-accesorios span:hover {
     color: #b5424a;
+}
+
+.featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 80vh;
+    gap: 4px;
+    padding: 40px;
+    background-color: #fdf6f6;
+}
+
+.featured-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.featured-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.featured-item:hover img {
+    transform: scale(1.05);
+}
+
+.btn-featured {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-featured:hover {
+    background-color: white;
+    color: #3a3a3a;
+}
+
+.pagina-categoria {
+    padding: 40px;
+    min-height: 60vh;
+}
+
+.pagina-categoria h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: #3a3a3a;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    color: #7a7a7a;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #7a7a7a;
+}
+
+.breadcrumb a:hover {
+    color: #b5424a;
+}
+
+.breadcrumb span {
+    color: #b5424a;
+    font-weight: bold;
+}
+
+.modal-talles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.modal-talles p {
+    width: 100%;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin: 0;
+}
+
+.btn-talle {
+    padding: 8px 14px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+
+.btn-talle:hover {
+    border-color: #b5424a;
+}
+
+.btn-talle.seleccionado {
+    border-color: #b5424a;
+    background-color: #b5424a;
+    color: white;
 }
